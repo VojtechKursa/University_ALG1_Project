@@ -139,7 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="CPUAdvanced.cpp" />
+    <ClCompile Include="CPUSystemAbstract.cpp" />
+    <ClCompile Include="CPUSystemAdvanced.cpp" />
+    <ClCompile Include="CPUSystemRoundRobin.cpp" />
+    <ClCompile Include="CPUSystemSimple.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CPU.hpp" />
+    <ClInclude Include="CPUAdvanced.hpp" />
+    <ClInclude Include="CPUSystemAbstract.hpp" />
+    <ClInclude Include="CPUSystemAdvanced.hpp" />
+    <ClInclude Include="CPUSystemRoundRobin.hpp" />
+    <ClInclude Include="CPUSystemSimple.hpp" />
+    <ClInclude Include="TaskCost.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
