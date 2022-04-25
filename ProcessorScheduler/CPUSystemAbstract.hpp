@@ -25,7 +25,7 @@ protected:
 	CPU** GetCPUs();
 	int GetCPUCount();
 
-	virtual void Schedule(queue<char> tasks) = 0;
+	virtual void Schedule(queue<char> &tasks) = 0;
 
 public:
 	CPUSystemAbstract(CPU** cpus, int cpuCount);
@@ -34,7 +34,7 @@ public:
 	int GetCyclesWorked();
 	int GetCyclesWorkedTotal();
 
-	void ProcessBatch(queue<char> tasks);
+	void ProcessBatch(queue<char> &tasks);
 
 	string GetBatchReport();
 };

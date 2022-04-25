@@ -15,7 +15,7 @@ char CPU::GetAffinity()
 { return this->affinity; }
 
 int CPU::GetTaskCount()
-{ return this->taskQueue.size(); }
+{ return (int)this->taskQueue.size(); }
 
 int CPU::GetCyclesToFinish()
 { return this->cyclesToFinish; }
@@ -72,9 +72,10 @@ bool CPU::NextCycle()
 	cyclesWorkedTotal++;
 
 	if (newTask)
-		taskLog += currTask + " ";
+		taskLog += currTask;
 	else
-		taskLog += tolower(currTask) + " ";
+		taskLog += tolower(currTask);
+	taskLog += ' ';
 
 	return !(currTaskCyclesRemaining == 0 && taskQueue.empty());
 }

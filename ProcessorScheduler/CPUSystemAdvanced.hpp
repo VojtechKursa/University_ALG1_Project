@@ -2,7 +2,7 @@
 
 #include "CPUSystemAbstract.hpp"
 
-class CPUSystemAdvanced : CPUSystemAbstract
+class CPUSystemAdvanced : public CPUSystemAbstract
 {
 };
 

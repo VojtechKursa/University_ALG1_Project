@@ -6,10 +6,10 @@
 #include "CPUSystemAbstract.hpp"
 #include "CPU.hpp"
 
-class CPUSystemRoundRobin : CPUSystemAbstract
+class CPUSystemRoundRobin : public CPUSystemAbstract
 {
 protected:
-	virtual void Schedule(queue<char> tasks) override;
+	virtual void Schedule(queue<char> &tasks) override;
 
 public:
 	CPUSystemRoundRobin(CPU** cpus, int cpuCount);

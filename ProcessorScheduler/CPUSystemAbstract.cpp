@@ -44,7 +44,7 @@ int CPUSystemAbstract::GetCPUCount()
 
 
 
-void CPUSystemAbstract::ProcessBatch(queue<char> tasks)
+void CPUSystemAbstract::ProcessBatch(queue<char> &tasks)
 {
     if (cpuCount < 1)
     {
@@ -109,7 +109,7 @@ int CPUSystemAbstract::FindMaxCyclesWorked()
         
         for(int i = 1; i < cpuCount; i++)
         {
-            if(cpus[i]->GetCyclesWorked() > max)
+            if(cpus[i]->GetCyclesWorked() > (unsigned int)max)
                 max = cpus[i]->GetCyclesWorked();
         }
 

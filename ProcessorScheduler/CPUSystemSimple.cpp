@@ -4,6 +4,7 @@ CPUSystemSimple::CPUSystemSimple(CPU** cpus, int cpuCount) : CPUSystemAbstract(c
 {
     GetCPUs(this->cpus, this->cpuCount);
 
+    this->affinities = new char[this->cpuCount];
     for(int i = 0; i < this->cpuCount; i++)
     {
         this->affinities[i] = this->cpus[i]->GetAffinity();
@@ -17,7 +18,7 @@ CPUSystemSimple::~CPUSystemSimple()
 
 
 
-void CPUSystemSimple::Schedule(queue<char> tasks)
+void CPUSystemSimple::Schedule(queue<char> &tasks)
 {
     CPU** cpus;
     int cpuCount;
@@ -28,7 +29,7 @@ void CPUSystemSimple::Schedule(queue<char> tasks)
 
     // Phase 1 - Assign to the CPU with affinity
 
-    int phase1Stop = tasks.size() / 2;
+    int phase1Stop = (int)tasks.size() / 2;
     for(int i = 0; i < phase1Stop; i++)
     {
         currTask = tasks.front();

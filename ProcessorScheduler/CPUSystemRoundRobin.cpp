@@ -5,7 +5,7 @@ CPUSystemRoundRobin::CPUSystemRoundRobin(CPU** cpus, int cpuCount) : CPUSystemAb
 
 
 
-void CPUSystemRoundRobin::Schedule(queue<char> tasks)
+void CPUSystemRoundRobin::Schedule(queue<char> &tasks)
 {
     CPU** cpus;
     int cpuCount;

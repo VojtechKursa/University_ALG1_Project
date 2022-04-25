@@ -3,7 +3,7 @@
 #include "CPU.hpp"
 #include "TaskCost.h"
 
-class CPUAdvanced : CPU
+class CPUAdvanced : public CPU
 {
 private:
 	TaskCost* costs;

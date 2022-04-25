@@ -6,7 +6,7 @@
 #include "CPUSystemAbstract.hpp"
 #include "CPU.hpp"
 
-class CPUSystemSimple : CPUSystemAbstract
+class CPUSystemSimple : public CPUSystemAbstract
 {
 private:
 	CPU** cpus;
@@ -19,7 +19,7 @@ private:
 	int FindCPUWithAffinity(char task);
 
 protected:
-	virtual void Schedule(queue<char> tasks) override;
+	virtual void Schedule(queue<char> &tasks) override;
 
 public:
 	CPUSystemSimple(CPU** cpus, int cpuCount);
