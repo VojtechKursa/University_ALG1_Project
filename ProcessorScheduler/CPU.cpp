@@ -9,29 +9,25 @@ CPU::CPU(string name, char affinity)
 
 
 string CPU::GetName()
-{
-	return this->name;
-}
+{ return this->name; }
 
 char CPU::GetAffinity()
-{
-	return this->affinity;
-}
+{ return this->affinity; }
+
+int CPU::GetTaskCount()
+{ return this->taskQueue.size(); }
+
+int CPU::GetCyclesToFinish()
+{ return this->cyclesToFinish; }
 
 unsigned int CPU::GetCyclesWorked()
-{
-	return this->cyclesWorked;
-}
+{ return this->cyclesWorked; }
 
 unsigned int CPU::GetCyclesWorkedTotal()
-{
-	return this->cyclesWorkedTotal;
-}
+{ return this->cyclesWorkedTotal; }
 
 string CPU::GetTaskLog()
-{
-	return this->taskLog;
-}
+{ return this->taskLog; }
 
 
 
@@ -45,6 +41,7 @@ int CPU::GetCost(char task)
 void CPU::AddTask(char task)
 {
 	taskQueue.push(task);
+	cyclesToFinish += GetCost(task);
 }
 
 // Returns: True if the CPU still has tasks to finish. False if the CPU finished all it's tasks.
@@ -70,6 +67,7 @@ bool CPU::NextCycle()
 	}
 
 	currTaskCyclesRemaining--;
+	cyclesToFinish--;
 	cyclesWorked++;
 	cyclesWorkedTotal++;
 
@@ -86,6 +84,7 @@ void CPU::Reset()
 	taskLog = "";
 	cyclesWorked = 0;
 
+	cyclesToFinish = 0;
 	currTaskCyclesRemaining = 0;
 	currTask = 0;
 

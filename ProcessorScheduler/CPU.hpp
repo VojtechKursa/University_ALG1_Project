@@ -11,6 +11,7 @@ private:
 	string name;
 
 	queue<char> taskQueue;
+	int cyclesToFinish = 0;
 	char currTask = 0;
 	int currTaskCyclesRemaining = 0;	//Amount of processor cycles remaining until the currently processed task is complete
 
@@ -26,6 +27,8 @@ public:
 
 	string GetName();
 	char GetAffinity();
+	int GetTaskCount();
+	int GetCyclesToFinish();
 	unsigned int GetCyclesWorked();
 	unsigned int GetCyclesWorkedTotal();
 	string GetTaskLog();
