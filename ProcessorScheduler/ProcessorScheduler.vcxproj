@@ -147,6 +147,7 @@
     <ClCompile Include="CPUSystemRoundRobin.cpp" />
     <ClCompile Include="CPUSystemSimple.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainAuxFuncs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandLineArguments.hpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="CPUSystemAdvanced.hpp" />
     <ClInclude Include="CPUSystemRoundRobin.hpp" />
     <ClInclude Include="CPUSystemSimple.hpp" />
+    <ClInclude Include="mainAuxFuncs.h" />
     <ClInclude Include="TaskCost.h" />
     <ClInclude Include="SelectedSchedulerEnum.h" />
   </ItemGroup>
