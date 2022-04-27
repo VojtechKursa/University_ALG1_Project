@@ -2,7 +2,17 @@
 
 void printHelp()
 {
-	// To do: help
+	cout << "Processor scheduler simulator" << "\n";
+	cout << "Usage: [exe_name] [options] [input_file]" << "\n\n";
+	cout << "Available options:" << "\n";
+	cout << "-h --help\t\t\tPrints this help and exits." << "\n";
+	cout << "-o --output-file [filename]\tWrites output of the program into the specified file." << "\n";
+	cout << "\t\t\t\tErrors and warnings are not written." << "\n";
+	cout << "-s --scheduler [number]\t\tSelects the scheduler the program should use." << "\n";
+	cout << "\t\t\t\tAvailable schedulers are (Round robin - 0, Simple - 1)." << "\n";
+	cout << "\t\t\t\tDefaults to: Simple - 1" << "\n";
+	cout << "-nc --no-console-output\t\tDisables the output to the console/terminal." << "\n";
+	cout << "\t\t\t\tErrors, warnings and the final message will still be written." << "\n";
 }
 
 CPUSystemAbstract* createCPUSystem(CommandLineArguments args)
