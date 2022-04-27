@@ -9,9 +9,6 @@
 #include "CPUSystemAbstract.hpp"
 #include "CPUSystemRoundRobin.hpp"
 #include "CPUSystemSimple.hpp"
-#include "TaskCost.h"
-#include "CPUAdvanced.hpp"
-#include "CPUSystemAdvanced.hpp"
 
 #include "mainAuxFuncs.h"
 
