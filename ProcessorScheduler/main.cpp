@@ -1,6 +1,8 @@
 #include <iostream>
 #include <queue>
 
+#include "CommandLineArguments.hpp"
+#include "SelectedSchedulerEnum.h"
 #include "CPU.hpp"
 #include "CPUSystemAbstract.hpp"
 #include "CPUSystemRoundRobin.hpp"

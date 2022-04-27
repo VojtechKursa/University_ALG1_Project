@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommandLineArguments.cpp" />
     <ClCompile Include="CPU.cpp" />
     <ClCompile Include="CPUAdvanced.cpp" />
     <ClCompile Include="CPUSystemAbstract.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandLineArguments.hpp" />
     <ClInclude Include="CPU.hpp" />
     <ClInclude Include="CPUAdvanced.hpp" />
     <ClInclude Include="CPUSystemAbstract.hpp" />
@@ -155,6 +157,7 @@
     <ClInclude Include="CPUSystemRoundRobin.hpp" />
     <ClInclude Include="CPUSystemSimple.hpp" />
     <ClInclude Include="TaskCost.h" />
+    <ClInclude Include="SelectedSchedulerEnum.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
