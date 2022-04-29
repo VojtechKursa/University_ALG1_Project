@@ -354,3 +354,6 @@ MigrationBackup/
 
 # Ignore test output
 */testOutputs/
+
+# Ignore generated documentation
+docs/

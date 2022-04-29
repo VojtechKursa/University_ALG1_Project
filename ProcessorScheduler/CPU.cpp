@@ -44,7 +44,6 @@ void CPU::AddTask(char task)
 	cyclesToFinish += GetCost(task);
 }
 
-// Returns: True if the CPU still has tasks to finish. False if the CPU finished all it's tasks.
 bool CPU::NextCycle()
 {
 	bool newTask = false;

@@ -10,6 +10,6 @@
 #include "CPUSystemSimple.hpp"
 
 void printHelp();
-CPUSystemAbstract* createCPUSystem(CommandLineArguments args);
+CPUSystemAbstract* createCPUSystem(CommandLineArguments args);  //!< Creates a CPUSystemAbstract based on the given CommandLineArguments.
 ifstream openInputFile(CommandLineArguments args);
 ofstream openOutputFile(CommandLineArguments args);

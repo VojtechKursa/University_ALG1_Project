@@ -3,17 +3,6 @@
 CPUSystemSimple::CPUSystemSimple(CPU** cpus, int cpuCount) : CPUSystemAbstract(cpus, cpuCount)
 {
     GetCPUs(this->cpus, this->cpuCount);
-
-    this->affinities = new char[this->cpuCount];
-    for(int i = 0; i < this->cpuCount; i++)
-    {
-        this->affinities[i] = this->cpus[i]->GetAffinity();
-    }
-}
-
-CPUSystemSimple::~CPUSystemSimple()
-{
-    delete[] affinities;
 }
 
 

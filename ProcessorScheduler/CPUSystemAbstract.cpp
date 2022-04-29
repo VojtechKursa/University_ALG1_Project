@@ -43,7 +43,6 @@ int CPUSystemAbstract::GetCPUCount()
 
 
 
-
 void CPUSystemAbstract::ProcessBatch(queue<char> &tasks)
 {
     if (cpuCount < 1)

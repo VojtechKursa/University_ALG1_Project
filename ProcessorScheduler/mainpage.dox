@@ -1,0 +1,17 @@
+/*!
+\mainpage
+Welcome to the documentaion of my Processor Scheduler program.  
+To find out how to use it, run it's executable with either the \-h or \-\-help argument.
+
+### Some notes about the arguments:
+- It doesn't matter whether you use specifically the flag shown in the help (for example, help can also be displayed with \-help or \-\-h as long as you use 1 or 2 dashes).  
+- It also doesn't matter whether you specify the input file as the last argument, the first argument or among options, the input file will be selected as the last argument with no dash in front of it.  
+
+All the facts mentioned above are intended behavior and certainly don't have anything to do with my laziness to make the program behave according to the help screen.  
+The only mandatory argument is the path to the input file.
+
+### The default behaviour of the program is:
+- Output file: None
+- No console output: False
+- Scheduler: 1 (Simple)
+*/

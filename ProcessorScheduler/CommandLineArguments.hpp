@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//! Class for parsing and holding arguments passed from the command line
 class CommandLineArguments
 {
 private:
