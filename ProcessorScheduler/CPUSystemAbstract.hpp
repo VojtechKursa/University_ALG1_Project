@@ -20,6 +20,7 @@ private:
 
 	int cyclesWorked = 0;
 	int cyclesWorkedTotal = 0;
+	string batch = "";
 
 	void Reset();
 	int FindMaxCyclesWorked();

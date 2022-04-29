@@ -53,7 +53,17 @@ void CPUSystemAbstract::ProcessBatch(queue<char> &tasks)
 
     Reset();
 
-    Schedule(tasks);
+    queue<char> tasksCopy;
+    while (!tasks.empty())
+    {
+        char task = tasks.front();
+        tasks.pop();
+
+        this->batch += task;
+        tasksCopy.push(task);
+    }
+
+    Schedule(tasksCopy);
 
     bool run;
     do
@@ -72,7 +82,7 @@ void CPUSystemAbstract::ProcessBatch(queue<char> &tasks)
 
 string CPUSystemAbstract::GetBatchReport()
 {
-    string report = "BATCH REPORT:\n";
+    string report = "BATCH REPORT: " + batch + "\n";
 
     CPU* cpu;
     for(int i = 0; i < cpuCount; i++)
@@ -98,6 +108,7 @@ void CPUSystemAbstract::Reset()
     }
 
     cyclesWorked = 0;
+    batch = "";
 }
 
 int CPUSystemAbstract::FindMaxCyclesWorked()
